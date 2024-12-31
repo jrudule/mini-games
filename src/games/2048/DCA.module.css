@@ -1,0 +1,169 @@
+:global(body) {
+  background: #acabab;
+  height: 85vh;
+  overscroll-behavior: contain;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.heading {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+div.start{
+  margin-top: -140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.start h1 {
+  font-size: 70px;
+}
+
+.startButton, .howToPlay {
+  font-weight: bold;
+  width: max-content;
+    border: black solid 1px;
+}
+
+.startButton {
+  background: #73ad80;
+  padding: 10px 30px;
+  font-size: 22px;
+}
+.startButton:hover {
+  background: #217633;
+}
+
+.howToPlay {
+  margin-top: 10px;
+  background: #bfdd49;
+  padding: 10px 10px;
+  font-size: 14px;
+}
+.howToPlay:hover {
+  background: #65771c;
+}
+
+.rules {
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: absolute;
+  z-index: 5;
+  top: 25%;
+  left: 0; 
+  right: 0; 
+  width: fit-content;
+  margin-inline: auto;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  border: #000 solid 1px;
+  text-align: left;
+}
+
+.x {
+  background: rgb(72, 199, 72);
+  width: max-content;
+  padding: 0 6px 2px;
+  border-radius: 5px;
+  color: rgb(228, 228, 228);
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.x:hover {
+  background: rgb(27, 81, 10);
+  color: #000;
+  cursor: pointer;
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.restartWhilePlaying {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.board {
+  border-radius: 20px;
+}
+.row {
+  display: flex;
+  
+}
+.col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: black 5px solid;
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  background: rgb(92, 92, 92);
+  color: rgb(43, 43, 43);
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.endDiv {
+  display: flex;
+  flex-direction: column;
+  padding: 0 40px;
+  margin-top: 10px;
+  gap: 20px;
+}
+
+.continueButton, .restartButton {
+  font-weight: bold;
+  padding: 10px 20px;
+  font-size: 20px;
+  border: black solid 1px;
+}
+.continueButton{
+  background: #ffe8c6;
+}
+.continueButton:hover {
+  background: #ebca9a;
+}
+.restartButton{
+  background: #e09b32;
+}
+.restartButton:hover {
+  background: #ae6d0c;
+}
+
+
+
+@media screen and (max-width: 500px) {
+  .col {
+    width: 80px;
+    height: 80px;
+    font-size: 28px;
+  }
+  .rules {
+    padding: 15px;
+     top: 10%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .col {
+    width: 60px;
+    height: 60px;
+    font-size: 22px;
+  }
+
+}

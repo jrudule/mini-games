@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <div class="container">
+        <div class="title">CHOOSE YOUR FIGHTER</div>
+        <div class="valueDiv">
+            <button value="Rock" class="Rock">Rock</button>
+            <button value="Paper" class="Paper">Paper</button>
+            <button value="Scissors" class="Scissors">Scissors</button>
+        </div>
+
+        <button value="start" class="start">Start</button>
+        <button value="howToPlay" class="howToPlay">How to play</button>
+
+        <div class="pointDiv">
+            <h1>Choose the maximum number of points</h1>
+            <div class="selectDiv">
+                <select id="pointSelect"></select>
+                <button value="select" class="selectPoints">Select</button>
+            </div>
+        </div>
+
+        <div class="ruleDiv">
+            <div class="purpose">
+                <h2>Game Purpose</h2>
+                <p>The goal is to beat the computer by selecting a move that wins according to the game's rules:</p>
+                <ul>
+                    <li><strong>Rock</strong> beats <strong>Scissors</strong> (Rock crushes Scissors).</li>
+                    <li><strong>Scissors</strong> beats <strong>Paper</strong> (Scissors cut Paper).</li>
+                    <li><strong>Paper</strong> beats <strong>Rock</strong> (Paper covers Rock).</li>
+                </ul>
+                <div>If one of the players reaches the chosen point count, they win!</div>
+                <div>If both players choose the same move, it's a tie! No one gets a point.</div>
+            </div>
+            
+            <div class="howTo">
+                <h2>How to Play</h2>
+                <ol>
+                    <li>Press the <strong>Start</strong> button to begin the game.</li>
+                    <li>Choose the maximum points for the player and click <strong>Select</strong>.</li>
+                    <li>Choose your move:
+                        <ul>
+                            <li>Click on <strong>Rock</strong>, <strong>Paper</strong>, or <strong>Scissors</strong> to make your selection.</li>
+                        </ul>
+                    </li>
+                    <li>The winner is determined based on the rules above.</li>
+                </ol>
+            </div>            
+        </div>
+
+        <div class="gameDiv">
+            <div class="playerDiv"></div>
+
+            <div class="winnerDiv">
+                <div class="notif">
+                    <p class="winner"></p>
+                    <p class="winnerScore"></p>
+                </div>
+                <button value="restart" class="restart">Restart</button>
+            </div>
+
+            <div class="computerDiv"></div>   
+        </div>
+
+
+    </div>
+    <script  type="text/javascript" src="RockPaperScissors.js">  </script>
+</body>
+</html>

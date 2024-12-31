@@ -1,0 +1,355 @@
+  .container {
+    text-align: center;
+  }
+
+  .gameScreen, .startScreen, .endGame {
+    background: white; 
+    padding: 30px 70px;
+    border: #000 2px solid; 
+    border-radius: 10px;
+  }
+  
+  .startScreen{
+    display: flex;
+    flex-direction: column;
+    top: -70px;
+    align-items: center;
+    position: relative;
+  }
+  
+  .startButton, .howToPlay {
+    font-weight: bold;
+    width: max-content;
+  }
+  
+  .startButton {
+    background: #73ad80;
+    padding: 8px 30px;
+    font-size: 22px;
+  }
+  .startButton:hover {
+    background: #217633;
+  }
+  
+  .howToPlay {
+    margin-top: 10px;
+    background: #bfdd49;
+    padding: 10px 10px;
+    font-size: 14px;
+  }
+  .howToPlay:hover {
+    background: #65771c;
+  }
+  
+  .rules {
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: absolute;
+    z-index: 5;
+    top: 25%;
+    left: 0; 
+    right: 0; 
+    width: fit-content;
+    margin-inline: auto;
+    background: white;
+    padding: 40px 25px;
+    border-radius: 10px;
+    border: #000 solid 1px;
+    text-align: left;
+  }
+  
+  .x {
+    background: rgb(72, 199, 72);
+    width: max-content;
+    padding: 0 6px 2px;
+    border-radius: 5px;
+    color: rgb(228, 228, 228);
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+  .x:hover {
+    background: rgb(27, 81, 10);
+    color: #000;
+    cursor: pointer;
+  }
+  
+  .row {
+    display: flex;
+  }
+  
+  .cell {
+    border: black 1px solid;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+  }
+  
+  
+  
+  .input {
+    background: #000;
+  }
+  
+  .bottomBorder {
+    border-bottom: 3px rgb(121, 114, 83) solid;
+  }
+  .rightBorder {
+    border-right: 3px rgb(121, 114, 83) solid;
+  }
+  .topBorder {
+    border-top: 3px rgb(121, 114, 83) solid;
+  }
+  .leftBSSorder {
+    border-left: 3px rgb(121, 114, 83) solid;
+  }
+  
+  .numberButtonList {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10px;
+  }
+  .numberButtonList button {
+    background: rgb(93, 159, 210);
+    color: white;
+    font-weight: bold;
+    padding: 15px 20px;
+  }
+  .numberButtonList button:hover {
+    background: rgb(21, 117, 190);
+  }
+  
+  
+  .selected {
+    background: rgb(214, 241, 214); 
+  }
+  
+  .noted {
+    color: blue;
+    font-size: 18px;
+    word-break: break-all;
+  }
+  
+  .notFillable {
+    color: rgb(121, 114, 83);
+  }
+  
+  .notCorrect{
+    color: red;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  .unhidden{
+    display: block;
+  }
+  
+  .error {
+    display: block;
+    color: red;
+  }
+  
+  .gameContainer {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .editButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .noteButton {
+    background: rgb(165, 183, 231);
+  }
+  .noteButton:hover, .notedButton {
+    background: rgb(77, 58, 218);
+  }
+  
+  .deleteButton {
+    background: rgb(221, 147, 147);
+  }
+  .deleteButton:hover {
+    background: rgb(205, 45, 45);
+  }
+  
+  .time {
+    padding: 5px 8px;
+    border-radius: 10px;
+    background: rgb(0, 0, 0);
+    color: white;
+  }
+  
+  .overlap {
+    background: rgb(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .endGame {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 500;
+  }
+  
+  .restartButton {
+    background: #e09b32;
+    margin: 20px 0;
+    font-weight: bold;
+    padding: 10px 20px;
+    font-size: 20px;
+  }
+  .restartButton:hover {
+    background: #ae6d0c;
+  }
+  
+  .editButtons .restartButton {
+    margin-top: auto;
+    margin-bottom: 0;
+    padding: 8px 10px;
+    font-size: 18px;
+  }
+  
+  
+  @media screen and (min-width: 650px) {
+    .cell:hover{
+      background: rgb(214, 241, 214); 
+    }
+  }
+  
+  @media screen and (max-width: 950px) {
+    .cell {
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+    }
+    .noted {
+      font-size: 12px;
+    }
+    .numberButtonList button {
+      padding: 5px 10px;
+    }
+  
+    .numberButtonList {
+      gap: 5px;
+    }
+    
+    .noteButton, .notedButton, .deleteButton {
+      width: max-content;
+    }
+  
+    .gameScreen{
+      padding: 15px 20px;
+    }
+    
+  }
+  
+  @media screen and (max-width: 650px) {
+  
+    .gameContainer{
+      flex-direction: column-reverse;
+    }
+  
+    .numberButtonList, .editButtons {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  
+    .editButtons button {
+      flex: 1;
+    }
+  
+    .time {
+      flex-basis: 100%;
+    }
+  
+    .editButtons .restartButton {
+      margin-top: 0;
+    }
+    
+  }
+  
+  @media screen and (max-width: 500px) {
+    h1 {
+      font-size: revert;
+    }
+  
+    .cell {
+      width: 35px;
+      height: 35px;
+    }
+    .noted {
+      font-size: 10px;
+    }
+    .numberButtonList button {
+      padding: 10px 15px;
+    }
+    .numberButtonList {
+      max-width: 250px;
+      margin: auto;
+      justify-content: center;
+    }
+  
+    .startScreen, .endGame {
+      padding: 15px 35px;
+    }
+  }
+  
+  @media screen and (max-width: 450px) {
+    #root {
+      padding: 0;
+    }
+    .cell {
+      width: 30px;
+      height: 30px;
+      font-size: 18px;
+    }
+    .noted {
+      font-size: 10px;
+    }
+    .numberButtonList button {
+      padding: 10px 15px;
+    }
+    .numberButtonList {
+      max-width: 250px;
+      margin: auto;
+      justify-content: center;
+    }
+  
+    .editButtons {
+      max-width: 290px;
+      margin: auto;
+    }
+  
+    .startScreen, .endGame {
+      padding: 15px 35px;
+    }
+  
+  }
+  
+  @media screen and (max-width: 350px) {
+    .cell {
+      width: 25px;
+      height: 25px;
+      font-size: 15px;
+    }
+    .noted {
+      font-size: 8px;
+    }
+  
+    .editButtons {
+      max-width: 250px;
+    }
+  }
+  

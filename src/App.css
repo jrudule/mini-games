@@ -1,0 +1,82 @@
+nav{
+  margin: 20px;
+
+}
+.links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.links li { 
+  list-style-type: none;
+}
+
+.links li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  font-size: 40px;
+  padding: 20px;
+  height: 200px;
+  width: 200px;
+  border-radius: 10px;
+  border: solid 4px black;
+}
+
+.links li a:hover {
+  box-shadow: 10px 10px 5px rgb(61, 63, 64);
+  cursor: pointer;
+}
+
+.rps a{
+  background: orange;
+}
+.snake a{
+  background: greenyellow;
+}
+.dca a{
+  background: violet;
+}     
+.mc a{
+  background: rgb(74, 74, 156);
+}   
+.sudoku a{
+  background: rgb(55, 148, 167);
+} 
+.ttt a{
+  background: brown;
+}
+
+@media screen and (max-width: 845px) {
+  .links li a {
+    font-size: 35px;
+    height: 150px;
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .links li a {
+    font-size: 27px;
+    height: 100px;
+    width: 100px;
+  }
+  .links {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 365px) {
+  .links li a {
+    font-size: 23px;
+    height: 80px;
+    width: 80px;
+  }
+}
