@@ -3,7 +3,7 @@ import { Routes, Route, Link, useLocation } from "react-router-dom";
 import HomeIcon from '@mui/icons-material/Home';
 import "./App.css";
 
-import RPS from "./games/rps";
+import RPS from "./games/RPS";
 import Snake from "./games/Snake";
 
 import DCA from "./games/2048/App";
