@@ -1,6 +1,16 @@
 import React from "react";
+import { useEffect } from 'react'
 
 const RPS = () => {
+  useEffect(() => {
+      document.body.style.overflow = "hidden";
+  
+      return () => {
+        // Cleanup on unmount
+        document.body.style.overflow = "";
+      };
+    }, []);
+
   return (
     <div>
       <iframe

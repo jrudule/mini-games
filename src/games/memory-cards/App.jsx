@@ -30,13 +30,11 @@ function Button({headingText, btnText, onClick, display = "block", height = 80, 
 function App() {
   useEffect(() => {
     document.body.style.display = "block";
-    document.body.style.overflow = "auto";
     document.body.style.background = "#b5b5b5";
 
     return () => {
       // Cleanup on unmount
       document.body.style.display = "";
-      document.body.style.overflow = "";
       document.body.style.background = "";
     };
   }, []);

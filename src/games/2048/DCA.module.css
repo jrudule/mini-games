@@ -1,8 +1,6 @@
 :global(body) {
   background: #acabab;
-  height: 85vh;
   overscroll-behavior: contain;
-  overflow: hidden;
   justify-content: center;
 }
 

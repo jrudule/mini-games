@@ -2,6 +2,15 @@ import { useState, useEffect } from 'react'
 import styles from './DCA.module.css';
 
 function App() {
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      // Cleanup on unmount
+      document.body.style.overflow = "";
+    };
+  }, []);
+
   const [isStarted, setIsStarted] = useState(false);
   const [showRules, setShowRules] = useState(false);
   const [board, setBoard] = useState(Array(4).fill(Array(4).fill('')));
