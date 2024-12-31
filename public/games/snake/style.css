@@ -198,10 +198,6 @@ button[name="300"], button[name="200"], button[name="100"] {
 }
 
 @media screen and (max-width: 910px) {
-
-    body {
-        height: 85vh;
-    }
     
     .startFrame {
         margin: 100px;
