@@ -10,6 +10,10 @@ body {
     overflow: hidden;
 }
 
+button {
+    color: #000;
+}
+
 #startScreen, #gameOverScreen {
     text-align: center;
 }

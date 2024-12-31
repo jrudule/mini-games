@@ -56,6 +56,7 @@ button{
     box-shadow: 5px 5px #5a5a5a;
     font-size: 4em;
     flex: 1;
+    color: #000;
 }
 
 #pointSelect{
