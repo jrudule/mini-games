@@ -1,8 +1,9 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This is a mini-games website.
+Each game was developed separately before this project was created.
+Each game has its own GitHub repository:
+  Rock Paper Scissors: https://github.com/jrudule/rps
+  Snake: https://github.com/jrudule/snake
+  2048: https://github.com/jrudule/2048
+  Tic Tac Toe: https://github.com/jrudule/tic-tac-toe
+  Sudoku: https://github.com/jrudule/sudoku
+  Memory Cards: https://github.com/jrudule/memory-cards-game
