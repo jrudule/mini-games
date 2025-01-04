@@ -317,7 +317,7 @@ function App() {
         <p>The goal of 2048 is to combine cells with the same number to reach the cell 2048.</p>
         <ul>
             <li><strong>Keyboard:</strong> Use the arrow keys <strong>↑ ↓ ← →</strong> or <strong>w s a d</strong> to move cells on the board.</li>
-            <li><strong>Touch:</strong> Swipe in the direction you want the snake to move.</li>
+            <li><strong>Touch:</strong> Swipe in the direction you want to move the cells on the board.</li>
             <li>When two cells with the same number collide, they merge into one.</li>
             <li>Each move adds a new cell (2 or 4) to the board.</li>
             <li>The game ends when the board is full and no more moves are possible.</li>
