@@ -12,6 +12,7 @@ function App() {
     }, []);
 
   const [isStarted, setIsStarted] = useState(false);
+  const [showRules, setShowRules] = useState(false);
   const [board, setBoard] = useState(Array(3).fill(Array(3).fill('')));
   const [isEnded, setIsEnded] = useState(false);
   const [isWinner, setIsWinner] = useState(null);
@@ -204,7 +205,16 @@ function App() {
 
   return (
     <div className={styles.container}>
-      <div className={`${isStarted ? styles.hidden : ''} ${isEnded ? styles.hidden : ''}`}>
+      <div className={showRules ? styles.rules : styles.hidden}>
+        <div className={styles.x} onClick={() => setShowRules(false)}>x</div>
+        <ul className={isEnded ? styles.hidden : styles.ruleList}>
+          <li>Place your symbol (X or O) in an empty square.</li>
+          <li>Get 3 in a row (horizontal, vertical, or diagonal) to win.</li>
+          <li>If all squares are filled with no winner, it’s a tie.</li>
+        </ul>
+      </div>
+
+      <div className={`${isStarted ? styles.hidden : styles.start} ${isEnded ? styles.hidden : ''}`}>
         <h1>Tic Tac Toe</h1>
         
         <div className={styles.XO}>
@@ -218,6 +228,9 @@ function App() {
         </div>
         <button className={styles.startButton} onClick={() => startGame()}>
           Start
+        </button>
+        <button className={styles.howToPlay} onClick={() => setShowRules(true)}>
+          How to play
         </button>
       </div>
 
@@ -244,11 +257,7 @@ function App() {
           ))}
         </div>
 
-        <ul className={isEnded ? styles.hidden : styles.rules}>
-          <li>Place your symbol (X or O) in an empty square.</li>
-          <li>Get 3 in a row (horizontal, vertical, or diagonal) to win.</li>
-          <li>If all squares are filled with no winner, it’s a tie.</li>
-        </ul>
+        
 
         <div className={isEnded ? styles.endGame : styles.hidden}>
           <button className={styles.restartButton} onClick={() => restartGame()}>

@@ -176,10 +176,43 @@ select {
 
 .ruleDiv {
     display: none;
-    position:absolute;
-    bottom:0;
+    position: absolute;
     padding: 10px;
     border-radius: 10px 10px 0 0;
+    flex-direction: column;
+    z-index: 5;
+    top: 20%;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-wrap: wrap;
+}
+
+#overlay {
+    background: rgba(0, 0, 0, 0.2);
+    width: 100vw;
+    height: 100vh;
+    z-index: 4;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.x {
+    background: rgb(72, 199, 72);
+    width: max-content;
+    padding: 0 6px 2px;
+    border-radius: 5px;
+    color: rgb(228, 228, 228);
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.x:hover {
+    background: rgb(27, 81, 10);
+    color: #000;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 950px){
@@ -217,9 +250,8 @@ select {
     .howToPlay{
         font-size: 2em;
     }
-    .ruleDiv{
-        flex-direction: column;
-        position:relative;
+    .ruleDiv {
+        top: 10%;
     }
 
     .title{

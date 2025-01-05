@@ -42,6 +42,7 @@ function App() {
   const languages = ["C", "C++", "JS", "Java", "Python", "PHP", "Ruby", ".NET", "C#", "Swift"];
 
   const [isStarted, setIsStarted] = useState(false);
+  const [showRules, setShowRules] = useState(false);
   const [count, setCount] = useState(0);
   const [bestCount, setBestCount] = useState(0);
   const [list, setList] = useState(languages);
@@ -95,10 +96,20 @@ function App() {
 
   return (
     <div className={styles.container}>
+      <div className={showRules ? styles.rules : styles.hidden}>
+        <div className={styles.x} onClick={() => setShowRules(false)}>x</div>
+        <div>
+          Earn points by clicking on language cards, but you can only click each card once.
+        </div>
+      </div>
+
       <div className={isStarted ? styles.hidden : styles.start}>
         <h1>Memory Cards</h1>
         <button className={styles.startButton} onClick={() => startGame()}>
           Start
+        </button>
+        <button className={styles.howToPlay} onClick={() => setShowRules(true)}>
+          How to play
         </button>
       </div>
 
@@ -106,9 +117,6 @@ function App() {
         <div className={isActive ? styles.game : styles.hidden}>
           <h1>Memory Cards</h1> 
           <div className={styles.gameText}>
-            <div className={styles.instr}>
-              Earn points by clicking on language cards, but you can only click each card once.
-            </div>
             <div className={styles.scoreDiv}>
               <div>Count is {count}</div>
               <div>Best count is {bestCount}</div>

@@ -11,6 +11,15 @@
 
 .start {
   margin-top: -50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gameCard, .startButton, .restartBtn, .howToPlay {
+  font-size: 2em;
+  font-weight: 700;
+  width: 200px;
 }
 
 .startButton {
@@ -22,6 +31,14 @@
   font-weight: 500;
 }
 
+.howToPlay {
+  margin-top: 10px;
+  font-size: 1.5em;
+}
+.howToPlay:hover {
+  background: #1c5a77;
+}
+
 .gameText {
   display: grid;
   grid-auto-flow: column;
@@ -31,20 +48,46 @@
   gap: 10px;
 }
 
-.instr {
-  justify-self: flex-start;
+.rules {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: absolute;
+  z-index: 5;
+  top: 45%;
+  left: 0; 
+  right: 0; 
+  width: fit-content;
+  margin-inline: auto;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  border: #000 solid 1px;
+  text-align: left;
+  height: 20%;
+  justify-content: center;
+}
+
+.x {
+  background: rgb(72, 199, 72);
+  width: max-content;
+  padding: 0 6px 2px;
+  border-radius: 5px;
+  color: rgb(228, 228, 228);
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.x:hover {
+  background: rgb(27, 81, 10);
+  color: #000;
+  cursor: pointer;
 }
 
 .scoreDiv {
   justify-self: end;
   font-size: 20px;
   font-weight: 700;
-}
-
-.gameCard, .startButton, .restartBtn {
-  font-size: 2em;
-  font-weight: 700;
-  width: 200px;
 }
 
 .gameCard {
