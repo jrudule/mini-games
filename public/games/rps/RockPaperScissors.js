@@ -43,11 +43,13 @@ start.addEventListener('click', () => {
 howToPlay.addEventListener('click', () => {
     ruleDiv.style.display = 'flex';
     overlay.style.display = 'block';
+    howToPlay.style.display = 'none';
 });
 
 x.addEventListener('click', () => {
     ruleDiv.style.display = 'none';
     overlay.style.display = 'none';
+    howToPlay.style.display = 'block';
 });
 
 

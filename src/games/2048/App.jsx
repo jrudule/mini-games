@@ -60,7 +60,6 @@ function App() {
           if(nonEmpty[i] === nonEmpty[i+1]){
             nonEmpty[i] = nonEmpty[i] + nonEmpty[i+1];
             nonEmpty[i+1] = '';
-             
           }
         }
          nonEmpty = nonEmpty.filter((val) => val !== '');    

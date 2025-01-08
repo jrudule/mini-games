@@ -55,13 +55,12 @@ function App() {
   }
 
   const handleItemClick = (name) => {
+    // To save the pressed card
     setClicked((prevClicked) => {
       if (prevClicked.includes(name)) {
         if(bestCount < count) {
           setBestCount(count);
         } 
-        else {}
-
         setCount(0);
         setIsActive(false);
         return []
